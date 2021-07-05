@@ -1,0 +1,13 @@
+.header {
+  background: var(--white);
+}
+
+.header__content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header__logo {
+  max-width: 100%;
+}

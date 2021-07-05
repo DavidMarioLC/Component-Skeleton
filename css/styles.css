@@ -1,0 +1,9 @@
+@import "./settings.css";
+@import "./wrapper.css";
+@import "./header.css";
+
+:root {
+  --fontbase: arial;
+  --primary: #ecf0f1;
+  --white: #ffffff;
+}
