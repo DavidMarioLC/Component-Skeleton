@@ -1,0 +1,23 @@
+{
+  "name": "portafolio-skeleton",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "servor  --reload --browse"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DavidMarioLC/portafolio-skeleton.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DavidMarioLC/portafolio-skeleton/issues"
+  },
+  "homepage": "https://github.com/DavidMarioLC/portafolio-skeleton#readme",
+  "devDependencies": {
+    "servor": "^4.0.2"
+  }
+}

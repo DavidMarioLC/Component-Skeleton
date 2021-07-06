@@ -1,9 +1,15 @@
 @import "./settings.css";
 @import "./wrapper.css";
 @import "./header.css";
+@import "./posts.css";
 
 :root {
-  --fontbase: arial;
+  --fontbase: "Raleway", sans-serif;
+  --title: bold 1.125rem/1.5rem var(--fontbase);
+  --textBold: 500 0.75rem/0.8rem var(--fontbase);
+  --text: 0.75rem/0.8rem var(--fontbase);
   --primary: #ecf0f1;
+  --black: #040b1d;
+  --gray: #c4c4c4;
   --white: #ffffff;
 }
