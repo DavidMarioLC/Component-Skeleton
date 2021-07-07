@@ -79,26 +79,8 @@
 /* loading */
 .loading {
   position: relative;
+  background: #d2d2d2;
 }
 
-.loading::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0;
-  height: 30%;
-  width: 100%;
-  background: #d2d2d2;
-  border-radius: 2px;
-}
-
-.loading::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 40%;
-  height: 30%;
-  width: 80%;
-  background: #d2d2d2;
-  border-radius: 2px;
+.article__photo.loading {
 }
