@@ -1,90 +1,63 @@
-posts = [
-    { 
-    id:1, 
-    image:'photo-article-01.png',
-    title:'De Figma a CSS en un click con este plugin',
-    avatar:'avatar-article-01.png',
-    user:'Leonidas',
-    time:'8 min read',
-    },
-    {
-    id:2, 
-    image:'photo-article-02.png',
-    title:'Toma fotografías que luzcan profesionales con tu teléfono',
-    avatar:'avatar-article-02.png',
-    user:'Carlos',
-    time:'6 min read',
-    },
-    {
-    id:3, 
-    image:'photo-article-03.png',
-    title:'3 libros para comenzar en UX-UI',
-    avatar:'avatar-article-01.png',
-    user:'uxcristopher',
-    time:'8 min read',
-    },
-    {
-    id:4, 
-    image:'photo-article-04.png',
-    title:'Becas por estudiar',
-    avatar:'avatar-article-04.png',
-    user:'Humberto',
-    time:'8 min read',
-    },
-     {
-    id:5, 
-    image:'photo-article-05.png',
-    title:'Más que un color bonito',
-    avatar:'avatar-article-05.png',
-    user:'Sandra',
-    time:'8 min read',
-    },
-    {
-    id:6, 
-    image:'photo-article-06.png',
-    title:'El misterio de las APIs',
-    avatar:'avatar-article-06.png',
-    user:'Mafer Mazu',
-    time:'8 min read',
-    },
-    {
-    id:7, 
-    image:'photo-article-07.png',
-    title:'Hola Cypress',
-    avatar:'avatar-article-07.png',
-    user:'Miguel',
-    time:'10 min read',
-    },
-    {
-    id:8, 
-    image:'photo-article-08.png',
-    title:'Qué hay detrás de flex:1;',
-    avatar:'avatar-article-08.png',
-    user:'Leonidas',
-    time:'6 min read',
-    },
-    {
-    id:9, 
-    image:'photo-article-09.png',
-    title:'',
-    avatar:'avatar-article-09.png',
-    user:'Humberto',
-    time:'8 min read',
-    },
-    // {
-    // id:10, 
-    // image:'photo-article-01.png',
-    // title:'De Figma a CSS en un click con este plugin',
-    // avatar:'avatar-article-01.png',
-    // user:'Leonidas',
-    // time:'8 min read',
-    // },
-    // {
-    // id:11, 
-    // image:'photo-article-01.png',
-    // title:'De Figma a CSS en un click con este plugin',
-    // avatar:'avatar-article-01.png',
-    // user:'Leonidas',
-    // time:'8 min read',
-    // }
-];
+import { posts } from './data.js';
+
+const articleImage = document.querySelectorAll('.article__photo');
+const articleTitle = document.querySelectorAll('.article__title');
+const avatar__image = document.querySelectorAll('.avatar__image');
+const avatar__name = document.querySelectorAll('.avatar__name');
+const time__read = document.querySelectorAll('.time__read');
+
+
+
+function loadingImage(image,index){
+    articleImage[index].classList.remove('skeleton');
+    const img = document.createElement('img');
+    img.src=`./images/${image}`;
+    articleImage[index].appendChild(img);
+}
+
+function loadingTitle(title,index){
+    articleTitle[index].classList.remove('skeleton');
+    articleTitle[index].textContent = title;
+
+}
+
+
+function loadingAvatar(avatar,index){
+    avatar__image[index].classList.remove('skeleton');
+    const img = document.createElement('img');
+    img.src=`./images/${avatar}`;
+    avatar__image[index].appendChild(img);
+    
+}
+
+
+function loadingAvatarName(name,index){
+    avatar__name[index].classList.remove('skeleton');
+    avatar__name[index].textContent = name;
+}
+
+
+function loadingTimeRead(time,index){
+    time__read[index].classList.remove('skeleton');
+    time__read[index].classList.add('show');
+    time__read[index].textContent = time;
+}
+
+
+function loadCards(){
+    posts.forEach((post,index)=>{
+        const {image,title,avatar,user,time} = post;
+
+        loadingImage(image,index);
+        loadingTitle(title,index);
+        loadingAvatar(avatar,index);
+        loadingAvatarName(user,index);
+        loadingTimeRead(time,index);
+    })
+}
+
+
+setTimeout(()=>{
+    loadCards();
+},3000)
+
